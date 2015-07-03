@@ -42,5 +42,6 @@ carModule.controller("carsController", function ($scope, $routeParams, $location
 		carsFactory.updateCar(car, function(updatedCar){
 			console.log(updatedCar);
 		});
+		$location.path("/showCar/"+car._id);
 	}
 });

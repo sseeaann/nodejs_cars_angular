@@ -47,6 +47,7 @@ module.exports = (function(app){
 			});
 		},
 		updateCar: function(req, res){
+			console.log("POST DATA: ", req.body);
 			carsModel.update({_id: req.body._id}, { $set: { make: req.body.make, model: req.body.model, year: req.body.year }}, function(err, data){
 				if(err){
 					console.log("ERR ERR while trying to update car!", err);
